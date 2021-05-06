@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            font-family: sans-serif;
+        }
+        img{
+            border: 2px solid red;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Img:</h2>
+    <img 
+        src="300.png" 
+        alt="" 
+        sizes="
+            (min-width: 500px) 900px,
+            (min-width: 400px) 600px,
+            300px
+        " 
+        srcset="
+            300.png 300w,
+            600.png 600w,
+            900.png 900w
+        " 
+    >
+    <h2>Picture:</h2>
+    <picture>
+        <source media="(min-width:500px)" srcset="900.png">
+        <source media="(min-width:400px)" srcset="600.png">
+        <img src="300.png" alt="">
+    </picture>
+</body>
+</html>
